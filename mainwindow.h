@@ -12,14 +12,14 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
     modbusEngine* mb;
-    uint16_t reg[2];
+    uint16_t reg[2];// tablica rejestrów modbusa przekazemy jako wskaźnik do obiektu klasy modbus Engine
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void on_pushButton_clicked();
-    void dataRead();
+    void dataRead(); // slot gdy dane będą gotowe do obróbki (tablica rejestrów odświerzona)
 
 private:
     Ui::MainWindow *ui;
