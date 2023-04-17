@@ -19,7 +19,10 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui
+#msys2
 LIBS+=-llibmodbus
+#linux chciał inaczej
+#LIBS+=-lmodbus
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
