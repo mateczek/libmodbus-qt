@@ -3,13 +3,13 @@ msys2 https://www.msys2.org/
 
 instalacja Qt w msys2:
 1. Aktualizacja Msys2 wszystkich pakietów(po aktualizacji zamknąć okno msys2 i ponownie uruchomić i powtórzyć aktualizację)
-  - pacman -Syuu 
+    - pacman -Syuu 
 
 2. Instalacja kompilatora włąściwie (toolchain) mingw w wersji 64 bit:
-  - pacman -S  mingw-w64-x86_64-toolchain
+    - pacman -S  mingw-w64-x86_64-toolchain
 
 3. Instalacja qtCreator:
-  - pacman -S  mingw-w64-x86_64-qt-creator
+    - pacman -S  mingw-w64-x86_64-qt-creator
 
 4. intalacja libmodbus:
-  - pacman -S mingw-w64-x86_64-libmodbus-git
+    - pacman -S mingw-w64-x86_64-libmodbus-git
