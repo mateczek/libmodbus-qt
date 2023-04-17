@@ -19,8 +19,8 @@ modbusEngine::modbusEngine(uint16_t *_modbusReg,int _regSize,int _baseAdr, QStri
     baseAdr =_baseAdr;
     ip = _ip;
     mb=nullptr;
-    timer=new QTimer(this);
-    connect(timer,SIGNAL(timeout()),this,SLOT(loopReadData()));
+    timer=new QTimer(this);// timer do cyklicznych zapytań 
+    connect(timer,SIGNAL(timeout()),this,SLOT(loopReadData()));//loopReadData wywoływana przez timer funkcja pytająca o rejestry
 }
 
 modbusEngine::~modbusEngine()
@@ -46,6 +46,7 @@ bool modbusEngine::modbusStart()
 void modbusEngine::loopReadData()
 {
     int ret=modbus_read_registers(mb,baseAdr,regSize,modbusReg);
-    if (ret==-1) emit modbusStop();
+    //odczyt rejestów zaczynających się od baseAdr i w liczbie regSize. odczytane rejestry do tablicy modbusReg
+    if (ret==-1) emit modbusStop();//gdy się nie powiedzie odczyt zatrzymaj aplikację.
     else emit dataRaded();
 }
