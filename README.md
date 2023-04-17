@@ -6,7 +6,7 @@ instalacja Qt w msys2:
   - pacman -Syuu 
 
 2. Instalacja kompilatora włąściwie (toolchain) mingw w wersji 64 bit:
-   - pacman -S  mingw-w64-x86_64-toolchain
+  - pacman -S  mingw-w64-x86_64-toolchain
 
 3. Instalacja qtCreator:
   - pacman -S  mingw-w64-x86_64-qt-creator
