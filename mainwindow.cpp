@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    mb=new modbusEngine(reg,sizeof(reg),0,"127.0.0.1",this);
+    mb=new modbusEngine(reg,sizeof(reg)/2,0,"127.0.0.1",this);
         // stworzenie obiektu klasy modbusEngine i przekazanie takich parametrów jak
         //wskaźnik na tablice rejestrów
         //rozmiar rejestrów do odczytania
